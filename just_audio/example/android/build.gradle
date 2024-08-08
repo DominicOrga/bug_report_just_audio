@@ -1,13 +1,15 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
-    }
-}
+//buildscript {
+//    ext.kotlin_version = '2.0.0'
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:8.5.1'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//    }
+//}
 
 allprojects {
     repositories {
@@ -28,10 +30,4 @@ tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
 
-gradle.projectsEvaluated {
-    project(":just_audio") {
-        tasks.withType(JavaCompile) {
-            options.compilerArgs << "-Werror"
-        }
-    }
-}
+    
